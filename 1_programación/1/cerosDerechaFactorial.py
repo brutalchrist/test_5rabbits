@@ -1,4 +1,8 @@
-# -*- coding: utf-8 -*-
+#-*- coding: utf-8 -*-
+"""
+Problema 1 del Test de programación para LemonTech.\n
+<Escriba una función/método que determine la cantidad de 0’s a la derecha de n! (factorial)>
+"""
 
 from sys import argv
 from time import strftime
