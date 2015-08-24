@@ -8,7 +8,7 @@ from sys import argv, maxint
 from time import strftime
 from constantes import *
 
-USO = "\nUso:\n    python enteroEnpalabras.py X\n    X = entero positivo"
+USO = "\nUso:\n    python enteroEnPalabras.py X\n    X = entero positivo"
 
 class EnteroEnPalabras():
     """Clase de pruebas"""
