@@ -19,11 +19,13 @@ class EnteroEnPalabras():
         #listaNumero = list(parametro)
 
         if int(parametro) <= 20:
-            print self.unidadPalabra(int(parametro))
+            return self.unidadPalabra(int(parametro))
         elif int(parametro) <= 100:
-            print self.decenaPalabra(int(parametro))
-        elif int(parametro) <= 1000:
-            print "cente"
+            return self.decenaPalabra(int(parametro))
+        elif int(parametro) < 1000:
+            return self.centenaPalabra(int(parametro))
+        elif int(parametro) < 1000000:
+            return self.milesimaPalabra(int(parametro))
 
 
     def unidadPalabra(self, n):
@@ -32,13 +34,39 @@ class EnteroEnPalabras():
     def decenaPalabra(self, n):
         lista = list(str(n))
 
-        if n < 30:
+        if n <= 20:
+            return self.unidadPalabra(n)
+        elif n < 30:
             return DECENAS[int(lista[0])-2] + UNIDADES[int(lista[1])]
         else:
             if n % 10 == 0:
                 return DECENAS[int(lista[0])-2]
             else:
                 return DECENAS[int(lista[0])-2] + ' y ' + UNIDADES[int(lista[1])]
+
+    def centenaPalabra(self, n):
+        lista = list(str(n))
+
+        return CENTENAS[int(lista[0])-1] + " " + self.decenaPalabra(int(lista[1] + lista[2]))
+
+    def milesimaPalabra(self, n):
+        lista = list(str(n))
+
+        print len(lista)
+
+        if len(lista) == 4:
+            #todo: terminar
+            if n < 2000:
+                print int(lista[1] + lista[2] + lista[3])
+                return OTROS[0] + " " + self.centenaPalabra(int(lista[1] + lista[2] + lista[3]))
+            else:
+                return self.unidadPalabra(int(lista[0])) + " " + OTROS[0] + " " + self.centenaPalabra(int(lista[1] + lista[2] + lista[3]))
+        if len(lista) == 5:
+            print "holi"
+        if len(lista) == 6:
+            print "holi"
+
+        return "miles"
 
 
 
@@ -62,3 +90,4 @@ class EnteroEnPalabras():
 
 if __name__ == '__main__':
     enteroEnPalabras = EnteroEnPalabras().enteroEnPalabras(argv[1])
+    print argv[1] + ": " + enteroEnPalabras
