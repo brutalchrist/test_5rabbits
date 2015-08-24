@@ -1,6 +1,6 @@
 #-*- coding: utf-8 -*-
 """
-Problema 1 del Test de programación para LemonTech.\n
+Problema 2 del Test de programación para LemonTech.\n
 <Escriba una función/método que dado un número entero, entregue su representación en palabras, Ej. 145 ­> "ciento cuarenta y cinco">
 """
 
