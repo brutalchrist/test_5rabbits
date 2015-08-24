@@ -1,6 +1,10 @@
-# -*- coding: utf-8 -*-
+#-*- coding: utf-8 -*-
+"""
+Problema 1 del Test de programación para LemonTech.\n
+<Escriba una función/método que dado un número entero, entregue su representación en palabras, Ej. 145 ­> "ciento cuarenta y cinco">
+"""
 
-from sys import argv
+from sys import argv, maxint
 from time import strftime
 from constantes import *
 
@@ -14,61 +18,74 @@ class EnteroEnPalabras():
             self.msjError("No coinciden los parametros." + USO)
 
     def enteroEnPalabras(self, parametro):
+        """Método principal para convertir el entero en palabras.
+            :param parametro: Número a convertir en palabras."""
         self.validarParametro(parametro)
 
-        #listaNumero = list(parametro)
+        return self.convertirNumero(int(parametro))
 
-        if int(parametro) <= 20:
-            return self.unidadPalabra(int(parametro))
-        elif int(parametro) <= 100:
-            return self.decenaPalabra(int(parametro))
-        elif int(parametro) < 1000:
-            return self.centenaPalabra(int(parametro))
-        elif int(parametro) < 1000000:
-            return self.milesimaPalabra(int(parametro))
+    def convertirNumero(self, n):
+        """Metodo recursivo para convertir el entero en palabras.
+        :param n: Número a convertir en palabras."""
+        # 10 ** 18?
+        # Calculo de las billonesimas
+        prim, resto = divmod(n, 1000000000)
+        if prim != 0:
+            if prim == 1:
+                salida = "un " + OTROS[2]
+            else:
+                salida = self.convertirNumero(prim) + " " + OTROS[2] + "es"
 
-
-    def unidadPalabra(self, n):
-        return UNIDADES[n]
-
-    def decenaPalabra(self, n):
-        lista = list(str(n))
-
-        if n <= 20:
-            return self.unidadPalabra(n)
-        elif n < 30:
-            return DECENAS[int(lista[0])-2] + UNIDADES[int(lista[1])]
+            if resto != 0:
+                salida = salida + " " + self.convertirNumero(resto)
         else:
-            if n % 10 == 0:
-                return DECENAS[int(lista[0])-2]
+            # Calculo de las millonesimas
+            prim, resto = divmod(n, 1000000)
+            if prim != 0:
+                if prim == 1:
+                    salida = "un " + OTROS[1]
+                else:
+                    salida = self.convertirNumero(prim) + " " + OTROS[1] + "es"
+
+                if resto != 0:
+                    salida = salida + " " + self.convertirNumero(resto)
             else:
-                return DECENAS[int(lista[0])-2] + ' y ' + UNIDADES[int(lista[1])]
+                # Calculo de las milesimas
+                prim, resto = divmod(n, 1000)
+                if prim != 0:
+                    if prim == 1:
+                        salida = OTROS[0]
+                    else:
+                        salida = self.convertirNumero(prim) + " " + OTROS[0]
 
-    def centenaPalabra(self, n):
-        lista = list(str(n))
+                    if resto != 0:
+                        salida = salida + " " + self.convertirNumero(resto)
 
-        return CENTENAS[int(lista[0])-1] + " " + self.decenaPalabra(int(lista[1] + lista[2]))
+                else:
+                    # Calculo de las centenas
+                    prim, resto = divmod(n, 100)
+                    if prim != 0:
+                        if resto == 0 and prim == 1:
+                            salida = CENTENAS[0]
+                        else:
+                            salida = CENTENAS[prim]
 
-    def milesimaPalabra(self, n):
-        lista = list(str(n))
+                        if resto != 0:
+                            salida = salida + " " + self.convertirNumero(resto)
+                    else:
+                        # Calculo de las decenas
+                        if resto <= 20:
+                            salida = UNIDADES[n]
+                        else:
+                            prim, resto = divmod(n, 10)
+                            salida = DECENAS[prim-2]
+                            if resto != 0:
+                                if prim == 2:
+                                    salida = salida + UNIDADES[resto]
+                                else:
+                                    salida = salida + " y " + UNIDADES[resto]
 
-        print len(lista)
-
-        if len(lista) == 4:
-            #todo: terminar
-            if n < 2000:
-                print int(lista[1] + lista[2] + lista[3])
-                return OTROS[0] + " " + self.centenaPalabra(int(lista[1] + lista[2] + lista[3]))
-            else:
-                return self.unidadPalabra(int(lista[0])) + " " + OTROS[0] + " " + self.centenaPalabra(int(lista[1] + lista[2] + lista[3]))
-        if len(lista) == 5:
-            print "holi"
-        if len(lista) == 6:
-            print "holi"
-
-        return "miles"
-
-
+        return salida
 
     def validarParametro(self, parametro):
         """Método para validar que el parámetro ingresado sea correcto.
@@ -77,6 +94,8 @@ class EnteroEnPalabras():
             validar = int(parametro)
             if validar < 0:
                 self.msjError("El parametro debe ser un entero positivo.")
+            elif validar > maxint:
+                self.msjError("El parametro excede el entero maximo para python2.\n\tsys.maxint = " + str(maxint))
         except ValueError:
             self.msjError("El parametro debe ser un entero positivo.")
 
