@@ -6,7 +6,7 @@ Problema 2 del Test de programación para LemonTech.\n
 
 from sys import argv, maxint
 from time import strftime
-from constantes import *
+from Constantes import *
 
 USO = "\nUso:\n    python enteroEnPalabras.py X\n    X = entero positivo"
 
@@ -19,14 +19,16 @@ class EnteroEnPalabras():
 
     def enteroEnPalabras(self, parametro):
         """Método principal para convertir el entero en palabras.
-            :param parametro: Número a convertir en palabras."""
+            :parameter:
+                - parametro: Número a convertir en palabras."""
         self.validarParametro(parametro)
 
         return self.convertirNumero(int(parametro))
 
     def convertirNumero(self, n):
         """Metodo recursivo para convertir el entero en palabras.
-        :param n: Número a convertir en palabras."""
+        :parameter:
+                - n: Número a convertir en palabras."""
         # 10 ** 18?
         # Calculo de las billonesimas
         prim, resto = divmod(n, 1000000000)
@@ -89,7 +91,8 @@ class EnteroEnPalabras():
 
     def validarParametro(self, parametro):
         """Método para validar que el parámetro ingresado sea correcto.
-            :param parametro: Parámetro a validar."""
+            :parameter:
+                - parametro: Parámetro a validar."""
         try:
             validar = int(parametro)
             if validar < 0:
@@ -102,7 +105,8 @@ class EnteroEnPalabras():
 
     def msjError(self, mensaje):
         """Método para desplegar un mensaje de error.
-            :param mensaje: Mensaje de error."""
+            :parameter:
+                - mensaje: Mensaje de error."""
         print "[" + strftime("%H:%M:%S") + "] ERROR: " + mensaje
         exit(0)
 

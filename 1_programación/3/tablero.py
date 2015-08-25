@@ -14,7 +14,7 @@ USO = "\nUso:\n    python tablero.py X\n    X > 4"
 LINUX = "linux2"
 WINDOWS = "win32"
 MACOS = "darwin"
-DELAY = 0.2
+DELAY = 0.3     # Tiempo de refresco entre cada jugada (segundos)
 
 class Tablero():
     """Clase de prueba"""
@@ -27,6 +27,9 @@ class Tablero():
         self.caballo = Caballo()
 
     def movimientoDelCaballo(self, parametro="DEFAULT"):
+        """Método principal para recorrer el tablero.
+            :parameter:
+                - parametro: Tamaño del tablero."""
         if parametro != "DEFAULT":
             self.validarParametro(parametro)
 
@@ -45,11 +48,14 @@ class Tablero():
         print "No hay solución"
 
     def jugar(self, contador):
+        """Método recursivo encargado de recorrer el tablero.
+            :parameter:
+                - contador: Número de la jugada."""
         contador = contador + 1
         pos = self.caballo.getXY()
 
         movimientosPosibles = self.movimientosPosibles()
-        movimientosPosibles = self.menosProbable(movimientosPosibles)
+        movimientosPosibles = self.mejorCamino(movimientosPosibles)
 
         for movimiento in movimientosPosibles:
             pos_ant = pos
@@ -65,7 +71,10 @@ class Tablero():
             pos = self.caballo.getXY()
             self.dibujarTablero()
 
-    def menosProbable(self, posPosibles):
+    def mejorCamino(self, posPosibles):
+        """Método encargado de buscar el mejor camino dentro de las jugadas existentes.
+            :parameter:
+                - posPosibles: Lista de posiciones posibles (jugadas)."""
         listaPosibles = []
         for movimiento in posPosibles:
             movActual = self.caballo.getXY()
@@ -77,6 +86,10 @@ class Tablero():
         return self.ordenar(listaPosibles, posPosibles)
 
     def ordenar(self, listaNumPosibles, listaOrdenar):
+        """Método encargado de ordenar de mayor a menor la lista de posibilidades.
+            :parameter:
+                - listaNumPosibles: Lista con el numero de caminos posibles para cada jugada.
+                - listaOrdenar: Lista de posiciones posibles (jugadas)."""
         for i in range(len(listaNumPosibles)):
             for j in range(len(listaNumPosibles) -1):
                 if listaNumPosibles[j] > listaNumPosibles[j+1]:
@@ -86,7 +99,8 @@ class Tablero():
         return listaOrdenar
 
     def movimientosPosibles(self):
-        movimentosCaballo = self.caballo.movimientosPosibles(self.rangoTablero)
+        """Método encargado de entregar las posiciones posibles (jugadas)."""
+        movimentosCaballo = self.caballo.movimientosPosibles()
         movimientos = []
         for mov in movimentosCaballo:
             x, y = mov[1]
@@ -95,6 +109,9 @@ class Tablero():
         return movimientos
 
     def moverCaballo(self, movimiento):
+        """Método encargado mover la posición del caballo.
+            :parameter:
+                - movimiento: Movimiento -> list[str(codigo), (x, y)]."""
         if movimiento[0] == "SDL":
             self.caballo.movSupDerLar(True)
         if movimiento[0] == "SIL":
@@ -114,15 +131,23 @@ class Tablero():
 
         self.dibujarCaballo()
 
-    def moverCaballoBorrar(self, pos, posAnterior):
+    def moverCaballoBorrar(self, pos, nuevaPos):
+        """Método encargado mover el caballo a una posición y borrar su posición anterior.
+            :parameter:
+                - pos: Posición a borrar -> (x, y).
+                - nuevaPos: Nueva posición -> (x, y)"""
         self.tablero[pos[0]][pos[1]] = "   "
-        self.caballo.setXY(posAnterior[0], posAnterior[1])
+        self.caballo.setXY(nuevaPos[0], nuevaPos[1])
         self.dibujarCaballo()
 
     def dibujarCaballo(self):
+        """Método encargado de dibujar el caballo."""
         self.tablero[self.caballo.getX()][self.caballo.getY()] = '°M~'  # Si, es un caballo.
 
     def dibujarContador(self, contador):
+        """Método encargado de dibujar el contador.
+            :parameter:
+                - contador: Número de la jugada."""
         if(contador < 10):
             self.tablero[self.caballo.getX()][self.caballo.getY()] = '  ' + str(contador)
         elif(contador < 100):
@@ -130,8 +155,8 @@ class Tablero():
         else:
             self.tablero[self.caballo.getX()][self.caballo.getY()] = str(contador)
 
-
     def tableroLleno(self):
+        """Método encargado de verificar si el tablero está completo."""
         for y in range(self.rangoTablero):
             for x in range(self.rangoTablero):
                 if self.tablero[x][y] == "   ":
@@ -139,6 +164,7 @@ class Tablero():
         return True
 
     def dibujarTablero(self):
+        """Método encargado de dibujar el tablero."""
         self.limpiarPantalla()
         print "\n"
         for y in range(self.rangoTablero):
@@ -150,14 +176,16 @@ class Tablero():
         sleep(DELAY)
 
     def limpiarPantalla(self):
+        """Método encargado de limpiar la pantalla"""
         if platform == LINUX or platform == MACOS:
            system('clear')
         elif platform == WINDOWS:
             system('cls')
 
     def validarParametro(self, parametro):
-        """Método para validar que el parámetro ingresado sea correcto.
-            :param parametro: Parámetro a validar."""
+        """Método encargado de validar que el parámetro ingresado sea correcto.
+            :parameter:
+                - parametro: Parámetro a validar."""
         try:
             validar = int(parametro)
             if validar < 0:
@@ -168,8 +196,9 @@ class Tablero():
             self.msjError("El parametro debe ser un entero positivo.")
 
     def msjError(self, mensaje):
-        """Método para desplegar un mensaje de error.
-            :param mensaje: Mensaje de error."""
+        """Método encargado de desplegar un mensaje de error.
+            :parameter:
+                - mensaje: Mensaje de error."""
         print "[" + strftime("%H:%M:%S") + "] ERROR: " + mensaje
         exit(0)
 

@@ -1,3 +1,9 @@
+Constantes	Constantes-module.html
+Constantes.UNIDADES	Constantes-module.html#UNIDADES
+Constantes.DECENAS	Constantes-module.html#DECENAS
+Constantes.__package__	Constantes-module.html#__package__
+Constantes.OTROS	Constantes-module.html#OTROS
+Constantes.CENTENAS	Constantes-module.html#CENTENAS
 enteroEnPalabras	enteroEnPalabras-module.html
 enteroEnPalabras.USO	enteroEnPalabras-module.html#USO
 enteroEnPalabras.CENTENAS	enteroEnPalabras-module.html#CENTENAS

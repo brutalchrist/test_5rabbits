@@ -22,7 +22,8 @@ class CerosDerechaFactorial():
 
     def cerosDerechaFactorial(self, parametro):
         """Método principal para calcular los ceros a la derecha de n factorial.
-            :param parametro: Número a calcular su factorial y los ceros a la derecha del mismo"""
+            :parameter:
+                - parametro: Número a calcular su factorial y los ceros a la derecha del mismo"""
         self.validarParametro(parametro)
 
         if MATH:
@@ -35,7 +36,8 @@ class CerosDerechaFactorial():
 
     def calcularFactorial(self, n):
         """Método para calcular el factorial de un número de manera manual.
-            :param n: Número a calcular su factorial."""
+            :parameter:
+                - n: Número a calcular su factorial."""
         resultado = 1
         n_int = int(n)
 
@@ -48,12 +50,14 @@ class CerosDerechaFactorial():
 
     def calcularFactorialMath(self, n):
         """Método para calcular el factorial de un número utilizando la librería Math.
-            :param n: Número a calcular su factorial."""
+            :parameter:
+                - n: Número a calcular su factorial."""
         return factorial(int(n))
 
     def calcularCerosDerecha(self, n):
         """Método para calcular los ceros a la derecha de un numero.
-            :param n: Número a calcular sus ceros a la derecha."""
+            :parameter:
+                - n: Número a calcular sus ceros a la derecha."""
         cerosDerecha = 0
         while True:
             """El cálculo del modulo y de n también se puede realiza utilizando la función divmod:
@@ -70,7 +74,8 @@ class CerosDerechaFactorial():
 
     def validarParametro(self, parametro):
         """Método para validar que el parámetro ingresado sea correcto.
-            :param parametro: Parámetro a validar."""
+            :parameter:
+                - parametro: Parámetro a validar."""
         try:
             validar = int(parametro)
             if validar < 0:
@@ -81,7 +86,8 @@ class CerosDerechaFactorial():
 
     def msjError(self, mensaje):
         """Método para desplegar un mensaje de error.
-            :param mensaje: Mensaje de error."""
+            :parameter:
+                - mensaje: Mensaje de error."""
         print "[" + strftime("%H:%M:%S") + "] ERROR: " + mensaje
         exit(0)
 
