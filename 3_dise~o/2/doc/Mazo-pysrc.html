@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Mazo</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th bgcolor="#70b0f0" class="navbar-select"
+          >&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Module&nbsp;Mazo
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="Mazo-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="Mazo-module.html">Module Mazo</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment">#-*- coding: utf-8 -*-</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring">Problema 2 del Test de dise&#241;o para LemonTech.\n</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-docstring">&lt;Dise&#241;e un mazo de cartas (orientado a objetos) con propiedades y m&#233;todos b&#225;sicos que considere para ser utilizado en distintas aplicaciones que utilicen cartas.&gt;</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"> </tt>
+<a name="Mazo"></a><div id="Mazo-def"><a name="L8"></a><tt class="py-lineno">  8</tt> <a class="py-toggle" href="#" id="Mazo-toggle" onclick="return toggle('Mazo');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="Mazo.Mazo-class.html">Mazo</a><tt class="py-op">(</tt><tt class="py-base-class">object</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Mazo-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="Mazo-expanded"><a name="Mazo.__init__"></a><div id="Mazo.__init__-def"><a name="L9"></a><tt class="py-lineno">  9</tt> <a class="py-toggle" href="#" id="Mazo.__init__-toggle" onclick="return toggle('Mazo.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="Mazo.Mazo-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">nombreMazo</tt><tt class="py-op">,</tt>  <tt class="py-param">nCartasMazo</tt><tt class="py-op">=</tt><tt class="py-number">60</tt><tt class="py-op">,</tt> <tt class="py-param">listaCartasMazo</tt><tt class="py-op">=</tt><tt class="py-op">[</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Mazo.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Mazo.__init__-expanded"><a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line">        <tt class="py-docstring">"""Inicializador de la clase.</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-docstring">            :parameter:</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-docstring">                - nombreMazo: Nombre del mazo</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-docstring">                - nCartasMazo: N&#250;mero de cartas del mazo (60 por defecto).</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-docstring">                - listaCartasMazo: Lista con las cartas del mazo (vacia por defecto)"""</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line">        <tt class="py-comment"># Se definen los atributos estaticos de un mazo</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">nombreMazo</tt> <tt class="py-op">=</tt> <tt class="py-name">nombreMazo</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">nCartasMazo</tt> <tt class="py-op">=</tt> <tt class="py-name">nCartasMazo</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">listaCartasMazo</tt> <tt class="py-op">=</tt> <tt class="py-name">listaCartasMazo</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line">        <tt class="py-comment"># Se definen los atributos din&#225;micos de un mazo</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">listaBiblioteca</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">listaCartasMazo</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">listaPozoDescarte</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+</div><a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line">    <tt class="py-comment"># Acciones</tt> </tt>
+<a name="Mazo.robarCartaBiblioteca"></a><div id="Mazo.robarCartaBiblioteca-def"><a name="L25"></a><tt class="py-lineno"> 25</tt> <a class="py-toggle" href="#" id="Mazo.robarCartaBiblioteca-toggle" onclick="return toggle('Mazo.robarCartaBiblioteca');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="Mazo.Mazo-class.html#robarCartaBiblioteca">robarCartaBiblioteca</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">nCartas</tt><tt class="py-op">=</tt><tt class="py-number">1</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Mazo.robarCartaBiblioteca-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Mazo.robarCartaBiblioteca-expanded"><a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line">        <tt class="py-docstring">"""M&#233;todo encargado de obtener la o las cartas de la la parte superior de la Biblioteca.</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt class="py-docstring">            :parameter:</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt class="py-docstring">                - nCartas: N&#250;mero de cartas a robar (1 por defecto)."""</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-string">"La(s) carta(s)"</tt> </tt>
+</div><a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"> </tt>
+<a name="Mazo.enviarCartasPozoDescarte"></a><div id="Mazo.enviarCartasPozoDescarte-def"><a name="L31"></a><tt class="py-lineno"> 31</tt> <a class="py-toggle" href="#" id="Mazo.enviarCartasPozoDescarte-toggle" onclick="return toggle('Mazo.enviarCartasPozoDescarte');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="Mazo.Mazo-class.html#enviarCartasPozoDescarte">enviarCartasPozoDescarte</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">listaCartas</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Mazo.enviarCartasPozoDescarte-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Mazo.enviarCartasPozoDescarte-expanded"><a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line">        <tt class="py-docstring">"""M&#233;todo encargado de enviarr una o unas cartas al Pozo de descarte.</tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"><tt class="py-docstring">            :parameter:</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line"><tt class="py-docstring">                - listaCartas: Lista las cartas a enviar."""</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-string">"Enviada la(s) carta(s): "</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">listaCartas</tt><tt class="py-op">)</tt> <tt class="py-op">+</tt> <tt class="py-string">" al Pozo de descarte"</tt> </tt>
+</div><a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line"> </tt>
+<a name="Mazo.buscarCartasBiblioteca"></a><div id="Mazo.buscarCartasBiblioteca-def"><a name="L37"></a><tt class="py-lineno"> 37</tt> <a class="py-toggle" href="#" id="Mazo.buscarCartasBiblioteca-toggle" onclick="return toggle('Mazo.buscarCartasBiblioteca');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="Mazo.Mazo-class.html#buscarCartasBiblioteca">buscarCartasBiblioteca</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">listaIndexs</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Mazo.buscarCartasBiblioteca-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Mazo.buscarCartasBiblioteca-expanded"><a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line">        <tt class="py-docstring">"""M&#233;todo encargado de obtener la o las cartas de una posici&#243;n especifica de la Biblioteca.</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line"><tt class="py-docstring">            :parameter:</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line"><tt class="py-docstring">                - listaIndexs: Lista con las posiciones de las cartas a obtener."""</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-string">"La(s) carta(s) con index(s): "</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">listaIndexs</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line"> </tt>
+<a name="Mazo.buscarCartasPozoDescarte"></a><div id="Mazo.buscarCartasPozoDescarte-def"><a name="L43"></a><tt class="py-lineno"> 43</tt> <a class="py-toggle" href="#" id="Mazo.buscarCartasPozoDescarte-toggle" onclick="return toggle('Mazo.buscarCartasPozoDescarte');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="Mazo.Mazo-class.html#buscarCartasPozoDescarte">buscarCartasPozoDescarte</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">listaIndexs</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Mazo.buscarCartasPozoDescarte-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Mazo.buscarCartasPozoDescarte-expanded"><a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">        <tt class="py-docstring">"""M&#233;todo encargado de obtener la o las cartas de una posici&#243;n especifica del Pozo de descarte.</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line"><tt class="py-docstring">            :parameter:</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line"><tt class="py-docstring">                - listaIndexs: Lista con las posiciones de las cartas a obtener."""</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-string">"La(s) carta(s) con index(s): "</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">listaIndexs</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line"> </tt>
+<a name="Mazo.devolverCartasBiblioteca"></a><div id="Mazo.devolverCartasBiblioteca-def"><a name="L49"></a><tt class="py-lineno"> 49</tt> <a class="py-toggle" href="#" id="Mazo.devolverCartasBiblioteca-toggle" onclick="return toggle('Mazo.devolverCartasBiblioteca');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="Mazo.Mazo-class.html#devolverCartasBiblioteca">devolverCartasBiblioteca</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">listaCartas</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Mazo.devolverCartasBiblioteca-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Mazo.devolverCartasBiblioteca-expanded"><a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">        <tt class="py-docstring">"""M&#233;todo encargado de devolver una o unas cartas en la parte superior de la Biblioteca.</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line"><tt class="py-docstring">            :parameter:</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"><tt class="py-docstring">                - listaCartas: Lista las cartas a devolver."""</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">        <tt class="py-keyword">print</tt> <tt class="py-string">"Agregada(s) la(s) carta(s): "</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">listaCartas</tt><tt class="py-op">)</tt> <tt class="py-op">+</tt> <tt class="py-string">" a la parte superior de la Biblioteca"</tt> </tt>
+</div><a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line"> </tt>
+<a name="Mazo.devolverCartasBibliotecaAleatorio"></a><div id="Mazo.devolverCartasBibliotecaAleatorio-def"><a name="L55"></a><tt class="py-lineno"> 55</tt> <a class="py-toggle" href="#" id="Mazo.devolverCartasBibliotecaAleatorio-toggle" onclick="return toggle('Mazo.devolverCartasBibliotecaAleatorio');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="Mazo.Mazo-class.html#devolverCartasBibliotecaAleatorio">devolverCartasBibliotecaAleatorio</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">listaCartas</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Mazo.devolverCartasBibliotecaAleatorio-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Mazo.devolverCartasBibliotecaAleatorio-expanded"><a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">        <tt class="py-docstring">"""M&#233;todo encargado de devolver una o unas cartas aleatoriamente a la Biblioteca.</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line"><tt class="py-docstring">            :parameter:</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"><tt class="py-docstring">                - listaCartas: Lista las cartas a devolver."""</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">        <tt class="py-keyword">print</tt> <tt class="py-string">"Agregada(s) la(s) carta(s): "</tt> <tt class="py-op">+</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">listaCartas</tt><tt class="py-op">)</tt> <tt class="py-op">+</tt> <tt class="py-string">" aleatoriamente a la Biblioteca"</tt> </tt>
+</div><a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line"> </tt>
+<a name="Mazo.cartasRestantesBiblioteca"></a><div id="Mazo.cartasRestantesBiblioteca-def"><a name="L61"></a><tt class="py-lineno"> 61</tt> <a class="py-toggle" href="#" id="Mazo.cartasRestantesBiblioteca-toggle" onclick="return toggle('Mazo.cartasRestantesBiblioteca');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="Mazo.Mazo-class.html#cartasRestantesBiblioteca">cartasRestantesBiblioteca</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Mazo.cartasRestantesBiblioteca-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Mazo.cartasRestantesBiblioteca-expanded"><a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">        <tt class="py-docstring">"""M&#233;todo encargado retornar el n&#250;mero de cartas restantes en la Biblioteca."""</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">listaBiblioteca</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"> </tt>
+<a name="Mazo.barajarBiblioteca"></a><div id="Mazo.barajarBiblioteca-def"><a name="L65"></a><tt class="py-lineno"> 65</tt> <a class="py-toggle" href="#" id="Mazo.barajarBiblioteca-toggle" onclick="return toggle('Mazo.barajarBiblioteca');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="Mazo.Mazo-class.html#barajarBiblioteca">barajarBiblioteca</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Mazo.barajarBiblioteca-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Mazo.barajarBiblioteca-expanded"><a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">        <tt class="py-docstring">"""M&#233;todo encargado de barajar la Biblioteca."""</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">        <tt class="py-keyword">print</tt> <tt class="py-string">"Biblioteca barajada"</tt> </tt>
+</div><a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line"> </tt>
+<a name="Mazo.barajarPozoDescarte"></a><div id="Mazo.barajarPozoDescarte-def"><a name="L69"></a><tt class="py-lineno"> 69</tt> <a class="py-toggle" href="#" id="Mazo.barajarPozoDescarte-toggle" onclick="return toggle('Mazo.barajarPozoDescarte');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="Mazo.Mazo-class.html#barajarPozoDescarte">barajarPozoDescarte</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Mazo.barajarPozoDescarte-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Mazo.barajarPozoDescarte-expanded"><a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">        <tt class="py-docstring">"""M&#233;todo encargado de barajar el Pozo de descarte."""</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">        <tt class="py-keyword">print</tt> <tt class="py-string">"Pozo de descarte barajada"</tt> </tt>
+</div><a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line"> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line"> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">    <tt class="py-comment"># Comprobaciones</tt> </tt>
+<a name="Mazo.isBibliotecaVacia"></a><div id="Mazo.isBibliotecaVacia-def"><a name="L75"></a><tt class="py-lineno"> 75</tt> <a class="py-toggle" href="#" id="Mazo.isBibliotecaVacia-toggle" onclick="return toggle('Mazo.isBibliotecaVacia');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="Mazo.Mazo-class.html#isBibliotecaVacia">isBibliotecaVacia</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Mazo.isBibliotecaVacia-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Mazo.isBibliotecaVacia-expanded"><a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">        <tt class="py-docstring">"""M&#233;todo encargado de retornar verdadero si la Biblioteca est&#225; vacia."""</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">listaBiblioteca</tt><tt class="py-op">)</tt> <tt class="py-op">&lt;=</tt> <tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">True</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+</div><a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line"> </tt>
+<a name="Mazo.isPozoDescarteVacio"></a><div id="Mazo.isPozoDescarteVacio-def"><a name="L81"></a><tt class="py-lineno"> 81</tt> <a class="py-toggle" href="#" id="Mazo.isPozoDescarteVacio-toggle" onclick="return toggle('Mazo.isPozoDescarteVacio');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="Mazo.Mazo-class.html#isPozoDescarteVacio">isPozoDescarteVacio</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Mazo.isPozoDescarteVacio-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Mazo.isPozoDescarteVacio-expanded"><a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">        <tt class="py-docstring">"""M&#233;todo encargado de retornar verdadero si el Pozo de descarte est&#225; vacio."""</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">listaBiblioteca</tt><tt class="py-op">)</tt> <tt class="py-op">&lt;=</tt> <tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">True</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+</div><a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line"> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line"> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">    <tt class="py-comment"># Getters &amp; Setters</tt> </tt>
+<a name="Mazo.getNombreMazo"></a><div id="Mazo.getNombreMazo-def"><a name="L89"></a><tt class="py-lineno"> 89</tt> <a class="py-toggle" href="#" id="Mazo.getNombreMazo-toggle" onclick="return toggle('Mazo.getNombreMazo');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="Mazo.Mazo-class.html#getNombreMazo">getNombreMazo</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Mazo.getNombreMazo-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Mazo.getNombreMazo-expanded"><a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">        <tt class="py-docstring">"""M&#233;todo encargado de retornar el nombre del Mazo."""</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">nombreMazo</tt> </tt>
+</div><a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line"> </tt>
+<a name="Mazo.setNombreMazo"></a><div id="Mazo.setNombreMazo-def"><a name="L93"></a><tt class="py-lineno"> 93</tt> <a class="py-toggle" href="#" id="Mazo.setNombreMazo-toggle" onclick="return toggle('Mazo.setNombreMazo');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="Mazo.Mazo-class.html#setNombreMazo">setNombreMazo</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">nombreMazo</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Mazo.setNombreMazo-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Mazo.setNombreMazo-expanded"><a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">        <tt class="py-docstring">"""M&#233;todo encargado de setear el nombre del Mazo.</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line"><tt class="py-docstring">            :parameter:</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"><tt class="py-docstring">                - nombreMazo: Nombre del mazo."""</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">nombreMazo</tt> <tt class="py-op">=</tt> <tt class="py-name">nombreMazo</tt> </tt>
+</div><a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line"> </tt>
+<a name="Mazo.getNCartasMazo"></a><div id="Mazo.getNCartasMazo-def"><a name="L99"></a><tt class="py-lineno"> 99</tt> <a class="py-toggle" href="#" id="Mazo.getNCartasMazo-toggle" onclick="return toggle('Mazo.getNCartasMazo');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="Mazo.Mazo-class.html#getNCartasMazo">getNCartasMazo</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Mazo.getNCartasMazo-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Mazo.getNCartasMazo-expanded"><a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">        <tt class="py-docstring">"""M&#233;todo encargado de retornar el n&#250;mero de cartas del Mazo."""</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">nCartasMazo</tt> </tt>
+</div><a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"> </tt>
+<a name="Mazo.setNCartasMazo"></a><div id="Mazo.setNCartasMazo-def"><a name="L103"></a><tt class="py-lineno">103</tt> <a class="py-toggle" href="#" id="Mazo.setNCartasMazo-toggle" onclick="return toggle('Mazo.setNCartasMazo');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="Mazo.Mazo-class.html#setNCartasMazo">setNCartasMazo</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">nCartasMazo</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Mazo.setNCartasMazo-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Mazo.setNCartasMazo-expanded"><a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">        <tt class="py-docstring">"""M&#233;todo encargado de setear el n&#250;mero de cartas del Mazo.</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line"><tt class="py-docstring">            :parameter:</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line"><tt class="py-docstring">                - nCartasMazo: N&#250;mero de cartas del mazo."""</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">nCartasMazo</tt> <tt class="py-op">=</tt> <tt class="py-name">nCartasMazo</tt> </tt>
+</div><a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line"> </tt>
+<a name="Mazo.getListaCartasMazo"></a><div id="Mazo.getListaCartasMazo-def"><a name="L109"></a><tt class="py-lineno">109</tt> <a class="py-toggle" href="#" id="Mazo.getListaCartasMazo-toggle" onclick="return toggle('Mazo.getListaCartasMazo');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="Mazo.Mazo-class.html#getListaCartasMazo">getListaCartasMazo</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Mazo.getListaCartasMazo-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Mazo.getListaCartasMazo-expanded"><a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">        <tt class="py-docstring">"""M&#233;todo encargado de retornar la lista de cartas del Mazo."""</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">listaCartasMazo</tt> </tt>
+</div><a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line"> </tt>
+<a name="Mazo.setListaCartasMazo"></a><div id="Mazo.setListaCartasMazo-def"><a name="L113"></a><tt class="py-lineno">113</tt> <a class="py-toggle" href="#" id="Mazo.setListaCartasMazo-toggle" onclick="return toggle('Mazo.setListaCartasMazo');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="Mazo.Mazo-class.html#setListaCartasMazo">setListaCartasMazo</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">listaCartasMazo</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Mazo.setListaCartasMazo-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Mazo.setListaCartasMazo-expanded"><a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">        <tt class="py-docstring">"""M&#233;todo encargado de setear la lista de cartas del Mazo.</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line"><tt class="py-docstring">            :parameter:</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line"><tt class="py-docstring">                - listaCartasMazo: Lista de cartas del Mazo."""</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">listaCartasMazo</tt> <tt class="py-op">=</tt> <tt class="py-name">listaCartasMazo</tt> </tt>
+</div><a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line"> </tt>
+<a name="Mazo.getListaBiblioteca"></a><div id="Mazo.getListaBiblioteca-def"><a name="L119"></a><tt class="py-lineno">119</tt> <a class="py-toggle" href="#" id="Mazo.getListaBiblioteca-toggle" onclick="return toggle('Mazo.getListaBiblioteca');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="Mazo.Mazo-class.html#getListaBiblioteca">getListaBiblioteca</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Mazo.getListaBiblioteca-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Mazo.getListaBiblioteca-expanded"><a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">        <tt class="py-docstring">"""M&#233;todo encargado de retornar la lista de cartas de la Biblioteca."""</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">listaBiblioteca</tt> </tt>
+</div><a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line"> </tt>
+<a name="Mazo.setListaBiblioteca"></a><div id="Mazo.setListaBiblioteca-def"><a name="L123"></a><tt class="py-lineno">123</tt> <a class="py-toggle" href="#" id="Mazo.setListaBiblioteca-toggle" onclick="return toggle('Mazo.setListaBiblioteca');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="Mazo.Mazo-class.html#setListaBiblioteca">setListaBiblioteca</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">listaBiblioteca</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Mazo.setListaBiblioteca-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Mazo.setListaBiblioteca-expanded"><a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line">        <tt class="py-docstring">"""M&#233;todo encargado de setear la lista de cartas de la Biblioteca. Esta lista suele ser la misma del Mazo, por ejemplo:</tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line"><tt class="py-docstring">            magicMazo.setListaBiblioteca(magicMazo.getListaCartasMazo())</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line"><tt class="py-docstring">            :parameter:</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line"><tt class="py-docstring">                - listaBiblioteca: Lista de cartas de la Biblioteca."""</tt> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">listaBiblioteca</tt> <tt class="py-op">=</tt> <tt class="py-name">listaBiblioteca</tt> </tt>
+</div><a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line"> </tt>
+<a name="Mazo.getListaPozoDescarte"></a><div id="Mazo.getListaPozoDescarte-def"><a name="L130"></a><tt class="py-lineno">130</tt> <a class="py-toggle" href="#" id="Mazo.getListaPozoDescarte-toggle" onclick="return toggle('Mazo.getListaPozoDescarte');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="Mazo.Mazo-class.html#getListaPozoDescarte">getListaPozoDescarte</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Mazo.getListaPozoDescarte-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Mazo.getListaPozoDescarte-expanded"><a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line">        <tt class="py-docstring">"""M&#233;todo encargado de retornar la lista de cartas del Pozo de descarte."""</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">listaPozoDescarte</tt> </tt>
+</div><a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line"> </tt>
+<a name="Mazo.setListaPozoDescarte"></a><div id="Mazo.setListaPozoDescarte-def"><a name="L134"></a><tt class="py-lineno">134</tt> <a class="py-toggle" href="#" id="Mazo.setListaPozoDescarte-toggle" onclick="return toggle('Mazo.setListaPozoDescarte');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="Mazo.Mazo-class.html#setListaPozoDescarte">setListaPozoDescarte</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">listaPozoDescarte</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Mazo.setListaPozoDescarte-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Mazo.setListaPozoDescarte-expanded"><a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line">        <tt class="py-docstring">"""M&#233;todo encargado de setear la lista de cartas del Pozo de descarte.</tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line"><tt class="py-docstring">            :parameter:</tt> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line"><tt class="py-docstring">                - listaBiblioteca: Lista de cartas de la Biblioteca."""</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">listaPozoDescarte</tt> <tt class="py-op">=</tt> <tt class="py-name">listaPozoDescarte</tt> </tt>
+</div></div><a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th bgcolor="#70b0f0" class="navbar-select"
+          >&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed Aug 26 17:41:24 2015
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
