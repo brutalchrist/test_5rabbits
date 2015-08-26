@@ -9,14 +9,16 @@ listaInserts = []
 while True:
     if len(listaInserts) == 20:
         break
+
     numeroRandom = randint(1, 100)
-    if(numeroRandom in listaInserts):
+    if int(numeroRandom) in listaInserts:
         continue
-    listaInserts.append("insert into PLAYERS values (\'NoName\', \'NoCountry\', " + str(numeroRandom) + ");")
+
+    listaInserts.append(numeroRandom)
 
 salida = open(ARCHIVOSALIDA, 'w')
 
 for insert in listaInserts:
-    salida.write(insert + '\n')
+    salida.write("insert into PLAYERS values (\'NoName\', \'NoCountry\', " + str(insert) + ");\n")
 
 print "Inserts generados en " + ARCHIVOSALIDA
