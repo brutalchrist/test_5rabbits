@@ -11,7 +11,7 @@ while True:
         break
 
     numeroRandom = randint(1, 100)
-    if int(numeroRandom) in listaInserts:
+    if numeroRandom in listaInserts:
         continue
 
     listaInserts.append(numeroRandom)
