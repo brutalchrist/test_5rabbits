@@ -26,7 +26,7 @@ class Mazo(object):
         """Método encargado de obtener la o las cartas de la la parte superior de la Biblioteca.
             :parameter:
                 - nCartas: Número de cartas a robar (1 por defecto)."""
-        return "La(s) carta(s)"
+        return "Se ha robado la carta: " + self.listaBiblioteca.pop()
 
     def enviarCartasPozoDescarte(self, listaCartas):
         """Método encargado de enviarr una o unas cartas al Pozo de descarte.
@@ -50,6 +50,7 @@ class Mazo(object):
         """Método encargado de devolver una o unas cartas en la parte superior de la Biblioteca.
             :parameter:
                 - listaCartas: Lista las cartas a devolver."""
+        # Si para robar utilizamos push para devolver utilizamos append
         print "Agregada(s) la(s) carta(s): " + str(listaCartas) + " a la parte superior de la Biblioteca"
 
     def devolverCartasBibliotecaAleatorio(self, listaCartas):

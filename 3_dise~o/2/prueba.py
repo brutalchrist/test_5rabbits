@@ -10,4 +10,8 @@ if __name__ == '__main__':
 
     magicMazo.setListaBiblioteca(magicMazo.getListaCartasMazo())
     print "Nombre: " + magicMazo.getNombreMazo() + ", Número de cartas: " + \
-          str(magicMazo.getNCartasMazo()) + "\nLista de Cartas: " + str(magicMazo.getListaBiblioteca())
+          str(magicMazo.getNCartasMazo()) + "\nBiblioteca: " + str(magicMazo.getListaBiblioteca())
+
+    print magicMazo.robarCartaBiblioteca()
+
+    print "Biblioteca: " + str(magicMazo.getListaBiblioteca())
