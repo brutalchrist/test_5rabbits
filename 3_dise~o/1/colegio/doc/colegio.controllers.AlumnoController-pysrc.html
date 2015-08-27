@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>colegio.controllers.AlumnoController</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;colegio ::
+        <a href="colegio.controllers-module.html">Package&nbsp;controllers</a> ::
+        Module&nbsp;AlumnoController
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="colegio.controllers.AlumnoController-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="colegio.controllers.AlumnoController-module.html">Module colegio.controllers.AlumnoController</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-comment">#-*- coding: utf-8 -*-</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-docstring">Clase AlumnoController para el problema 1 del Test de dise&#241;o para LemonTech.\n</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">sys</tt> <tt class="py-keyword">import</tt> <tt class="py-name">path</tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-string">'../classes'</tt><tt class="py-op">)</tt> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Module colegio.classes.Persona=colegio.classes.Persona-module.html,Class colegio.classes.Persona.Persona=colegio.classes.Persona.Persona-class.html"><a title="colegio.classes.Persona
+colegio.classes.Persona.Persona" class="py-name" href="#" onclick="return doclink('link-0', 'Persona', 'link-0');">Persona</a></tt> <tt class="py-keyword">import</tt> <tt id="link-1" class="py-name"><a title="colegio.classes.Persona
+colegio.classes.Persona.Persona" class="py-name" href="#" onclick="return doclink('link-1', 'Persona', 'link-0');">Persona</a></tt> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-2" class="py-name" targets="Module colegio.classes.Alumno=colegio.classes.Alumno-module.html,Class colegio.classes.Alumno.Alumno=colegio.classes.Alumno.Alumno-class.html"><a title="colegio.classes.Alumno
+colegio.classes.Alumno.Alumno" class="py-name" href="#" onclick="return doclink('link-2', 'Alumno', 'link-2');">Alumno</a></tt> <tt class="py-keyword">import</tt> <tt id="link-3" class="py-name"><a title="colegio.classes.Alumno
+colegio.classes.Alumno.Alumno" class="py-name" href="#" onclick="return doclink('link-3', 'Alumno', 'link-2');">Alumno</a></tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-4" class="py-name" targets="Module colegio.classes.Prueba=colegio.classes.Prueba-module.html,Class colegio.classes.Prueba.Prueba=colegio.classes.Prueba.Prueba-class.html"><a title="colegio.classes.Prueba
+colegio.classes.Prueba.Prueba" class="py-name" href="#" onclick="return doclink('link-4', 'Prueba', 'link-4');">Prueba</a></tt> <tt class="py-keyword">import</tt> <tt id="link-5" class="py-name"><a title="colegio.classes.Prueba
+colegio.classes.Prueba.Prueba" class="py-name" href="#" onclick="return doclink('link-5', 'Prueba', 'link-4');">Prueba</a></tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-6" class="py-name" targets="Module colegio.classes.Curso=colegio.classes.Curso-module.html,Class colegio.classes.Curso.Curso=colegio.classes.Curso.Curso-class.html"><a title="colegio.classes.Curso
+colegio.classes.Curso.Curso" class="py-name" href="#" onclick="return doclink('link-6', 'Curso', 'link-6');">Curso</a></tt> <tt class="py-keyword">import</tt> <tt id="link-7" class="py-name"><a title="colegio.classes.Curso
+colegio.classes.Curso.Curso" class="py-name" href="#" onclick="return doclink('link-7', 'Curso', 'link-6');">Curso</a></tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"> </tt>
+<a name="AlumnoController"></a><div id="AlumnoController-def"><a name="L13"></a><tt class="py-lineno">13</tt> <a class="py-toggle" href="#" id="AlumnoController-toggle" onclick="return toggle('AlumnoController');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="colegio.controllers.AlumnoController.AlumnoController-class.html">AlumnoController</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlumnoController-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="AlumnoController-expanded"><a name="AlumnoController.__init__"></a><div id="AlumnoController.__init__-def"><a name="L14"></a><tt class="py-lineno">14</tt> <a class="py-toggle" href="#" id="AlumnoController.__init__-toggle" onclick="return toggle('AlumnoController.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="colegio.controllers.AlumnoController.AlumnoController-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlumnoController.__init__-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="AlumnoController.__init__-expanded"><a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">persona</tt> <tt class="py-op">=</tt> <tt id="link-8" class="py-name"><a title="colegio.classes.Persona
+colegio.classes.Persona.Persona" class="py-name" href="#" onclick="return doclink('link-8', 'Persona', 'link-0');">Persona</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-9" class="py-name" targets="Variable colegio.classes.CursoAlumno.CursoAlumno.alumno=colegio.classes.CursoAlumno.CursoAlumno-class.html#alumno,Variable colegio.classes.PruebaAlumno.PruebaAlumno.alumno=colegio.classes.PruebaAlumno.PruebaAlumno-class.html#alumno"><a title="colegio.classes.CursoAlumno.CursoAlumno.alumno
+colegio.classes.PruebaAlumno.PruebaAlumno.alumno" class="py-name" href="#" onclick="return doclink('link-9', 'alumno', 'link-9');">alumno</a></tt> <tt class="py-op">=</tt> <tt id="link-10" class="py-name"><a title="colegio.classes.Alumno
+colegio.classes.Alumno.Alumno" class="py-name" href="#" onclick="return doclink('link-10', 'Alumno', 'link-2');">Alumno</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-11" class="py-name" targets="Variable colegio.classes.PruebaAlumno.PruebaAlumno.prueba=colegio.classes.PruebaAlumno.PruebaAlumno-class.html#prueba"><a title="colegio.classes.PruebaAlumno.PruebaAlumno.prueba" class="py-name" href="#" onclick="return doclink('link-11', 'prueba', 'link-11');">prueba</a></tt> <tt class="py-op">=</tt> <tt id="link-12" class="py-name"><a title="colegio.classes.Prueba
+colegio.classes.Prueba.Prueba" class="py-name" href="#" onclick="return doclink('link-12', 'Prueba', 'link-4');">Prueba</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-13" class="py-name" targets="Variable colegio.classes.CursoAlumno.CursoAlumno.curso=colegio.classes.CursoAlumno.CursoAlumno-class.html#curso,Variable colegio.classes.Prueba.Prueba.curso=colegio.classes.Prueba.Prueba-class.html#curso"><a title="colegio.classes.CursoAlumno.CursoAlumno.curso
+colegio.classes.Prueba.Prueba.curso" class="py-name" href="#" onclick="return doclink('link-13', 'curso', 'link-13');">curso</a></tt> <tt class="py-op">=</tt> <tt id="link-14" class="py-name"><a title="colegio.classes.Curso
+colegio.classes.Curso.Curso" class="py-name" href="#" onclick="return doclink('link-14', 'Curso', 'link-6');">Curso</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line"> </tt>
+<a name="AlumnoController.asignaPersonaComoAlumno"></a><div id="AlumnoController.asignaPersonaComoAlumno-def"><a name="L20"></a><tt class="py-lineno">20</tt> <a class="py-toggle" href="#" id="AlumnoController.asignaPersonaComoAlumno-toggle" onclick="return toggle('AlumnoController.asignaPersonaComoAlumno');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="colegio.controllers.AlumnoController.AlumnoController-class.html#asignaPersonaComoAlumno">asignaPersonaComoAlumno</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">persona</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlumnoController.asignaPersonaComoAlumno-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="AlumnoController.asignaPersonaComoAlumno-expanded"><a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line">        <tt class="py-docstring">"""Asigna a una persona como Alumno.</tt> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line"><tt class="py-docstring">            :parameter:</tt> </tt>
+<a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line"><tt class="py-docstring">                - persona: Persona a asignar."""</tt> </tt>
+</div><a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line"> </tt>
+<a name="AlumnoController.becarAlumno"></a><div id="AlumnoController.becarAlumno-def"><a name="L25"></a><tt class="py-lineno">25</tt> <a class="py-toggle" href="#" id="AlumnoController.becarAlumno-toggle" onclick="return toggle('AlumnoController.becarAlumno');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="colegio.controllers.AlumnoController.AlumnoController-class.html#becarAlumno">becarAlumno</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">alumno</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlumnoController.becarAlumno-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="AlumnoController.becarAlumno-expanded"><a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line">        <tt class="py-docstring">"""Beca a un alumno.</tt> </tt>
+<a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line"><tt class="py-docstring">            :parameter:</tt> </tt>
+<a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line"><tt class="py-docstring">                - alumno: Alumno a becar."""</tt> </tt>
+</div><a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line"> </tt>
+<a name="AlumnoController.pruebasAlumno"></a><div id="AlumnoController.pruebasAlumno-def"><a name="L30"></a><tt class="py-lineno">30</tt> <a class="py-toggle" href="#" id="AlumnoController.pruebasAlumno-toggle" onclick="return toggle('AlumnoController.pruebasAlumno');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="colegio.controllers.AlumnoController.AlumnoController-class.html#pruebasAlumno">pruebasAlumno</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">alumno</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlumnoController.pruebasAlumno-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="AlumnoController.pruebasAlumno-expanded"><a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line">        <tt class="py-docstring">"""Busca las pruebas por Alumno.</tt> </tt>
+<a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line"><tt class="py-docstring">            :parameter:</tt> </tt>
+<a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line"><tt class="py-docstring">                - alumno: Alumno a buscar."""</tt> </tt>
+</div><a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line"> </tt>
+<a name="AlumnoController.buscarAlumnosPrueba"></a><div id="AlumnoController.buscarAlumnosPrueba-def"><a name="L35"></a><tt class="py-lineno">35</tt> <a class="py-toggle" href="#" id="AlumnoController.buscarAlumnosPrueba-toggle" onclick="return toggle('AlumnoController.buscarAlumnosPrueba');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="colegio.controllers.AlumnoController.AlumnoController-class.html#buscarAlumnosPrueba">buscarAlumnosPrueba</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">prueba</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlumnoController.buscarAlumnosPrueba-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="AlumnoController.buscarAlumnosPrueba-expanded"><a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line">        <tt class="py-docstring">"""Busca Alumno(s) que rindio(eron) una Prueba.</tt> </tt>
+<a name="L37"></a><tt class="py-lineno">37</tt>  <tt class="py-line"><tt class="py-docstring">            :parameter:</tt> </tt>
+<a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line"><tt class="py-docstring">                - prueba: Prueba a buscar."""</tt> </tt>
+</div><a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line"> </tt>
+<a name="AlumnoController.buscarAlumnosCurso"></a><div id="AlumnoController.buscarAlumnosCurso-def"><a name="L40"></a><tt class="py-lineno">40</tt> <a class="py-toggle" href="#" id="AlumnoController.buscarAlumnosCurso-toggle" onclick="return toggle('AlumnoController.buscarAlumnosCurso');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="colegio.controllers.AlumnoController.AlumnoController-class.html#buscarAlumnosCurso">buscarAlumnosCurso</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">curso</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlumnoController.buscarAlumnosCurso-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="AlumnoController.buscarAlumnosCurso-expanded"><a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line">        <tt class="py-docstring">"""Busca Alumnos de un Curso.</tt> </tt>
+<a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line"><tt class="py-docstring">            :parameter:</tt> </tt>
+<a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line"><tt class="py-docstring">                - curso: Curso a buscar."""</tt> </tt>
+</div><a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line"> </tt>
+<a name="AlumnoController.busqueda"></a><div id="AlumnoController.busqueda-def"><a name="L45"></a><tt class="py-lineno">45</tt> <a class="py-toggle" href="#" id="AlumnoController.busqueda-toggle" onclick="return toggle('AlumnoController.busqueda');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="colegio.controllers.AlumnoController.AlumnoController-class.html#busqueda">busqueda</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">xPers</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlumnoController.busqueda-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="AlumnoController.busqueda-expanded"><a name="L46"></a><tt class="py-lineno">46</tt>  <tt class="py-line">        <tt class="py-docstring">"""Busca un Alumno por su Clave primaria.</tt> </tt>
+<a name="L47"></a><tt class="py-lineno">47</tt>  <tt class="py-line"><tt class="py-docstring">            :parameter:</tt> </tt>
+<a name="L48"></a><tt class="py-lineno">48</tt>  <tt class="py-line"><tt class="py-docstring">                - xPers: Clave primaria del Alumno."""</tt> </tt>
+</div><a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line"> </tt>
+<a name="AlumnoController.busquedaPorRun"></a><div id="AlumnoController.busquedaPorRun-def"><a name="L50"></a><tt class="py-lineno">50</tt> <a class="py-toggle" href="#" id="AlumnoController.busquedaPorRun-toggle" onclick="return toggle('AlumnoController.busquedaPorRun');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="colegio.controllers.AlumnoController.AlumnoController-class.html#busquedaPorRun">busquedaPorRun</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">run</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlumnoController.busquedaPorRun-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="AlumnoController.busquedaPorRun-expanded"><a name="L51"></a><tt class="py-lineno">51</tt>  <tt class="py-line">        <tt class="py-docstring">"""Busca un Alumno por su RUN.</tt> </tt>
+<a name="L52"></a><tt class="py-lineno">52</tt>  <tt class="py-line"><tt class="py-docstring">            :parameter:</tt> </tt>
+<a name="L53"></a><tt class="py-lineno">53</tt>  <tt class="py-line"><tt class="py-docstring">                - run: Run del Alumno."""</tt> </tt>
+</div><a name="L54"></a><tt class="py-lineno">54</tt>  <tt class="py-line"> </tt>
+<a name="AlumnoController.eliminarAlumno"></a><div id="AlumnoController.eliminarAlumno-def"><a name="L55"></a><tt class="py-lineno">55</tt> <a class="py-toggle" href="#" id="AlumnoController.eliminarAlumno-toggle" onclick="return toggle('AlumnoController.eliminarAlumno');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="colegio.controllers.AlumnoController.AlumnoController-class.html#eliminarAlumno">eliminarAlumno</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">alumno</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlumnoController.eliminarAlumno-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="AlumnoController.eliminarAlumno-expanded"><a name="L56"></a><tt class="py-lineno">56</tt>  <tt class="py-line">        <tt class="py-docstring">"""Elimina a un Alumno.</tt> </tt>
+<a name="L57"></a><tt class="py-lineno">57</tt>  <tt class="py-line"><tt class="py-docstring">            :parameter:</tt> </tt>
+<a name="L58"></a><tt class="py-lineno">58</tt>  <tt class="py-line"><tt class="py-docstring">                - alumno: Alumno a eliminar."""</tt> </tt>
+</div><a name="L59"></a><tt class="py-lineno">59</tt>  <tt class="py-line"> </tt>
+<a name="AlumnoController.actualizaAlumno"></a><div id="AlumnoController.actualizaAlumno-def"><a name="L60"></a><tt class="py-lineno">60</tt> <a class="py-toggle" href="#" id="AlumnoController.actualizaAlumno-toggle" onclick="return toggle('AlumnoController.actualizaAlumno');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="colegio.controllers.AlumnoController.AlumnoController-class.html#actualizaAlumno">actualizaAlumno</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">alumno</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlumnoController.actualizaAlumno-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="AlumnoController.actualizaAlumno-expanded"><a name="L61"></a><tt class="py-lineno">61</tt>  <tt class="py-line">        <tt class="py-docstring">"""Actualiza a un Alumno.</tt> </tt>
+<a name="L62"></a><tt class="py-lineno">62</tt>  <tt class="py-line"><tt class="py-docstring">            :parameter:</tt> </tt>
+<a name="L63"></a><tt class="py-lineno">63</tt>  <tt class="py-line"><tt class="py-docstring">                - alumno: Alumno a actualizar."""</tt> </tt>
+</div><a name="L64"></a><tt class="py-lineno">64</tt>  <tt class="py-line"> </tt>
+<a name="AlumnoController.agregarAlumno"></a><div id="AlumnoController.agregarAlumno-def"><a name="L65"></a><tt class="py-lineno">65</tt> <a class="py-toggle" href="#" id="AlumnoController.agregarAlumno-toggle" onclick="return toggle('AlumnoController.agregarAlumno');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="colegio.controllers.AlumnoController.AlumnoController-class.html#agregarAlumno">agregarAlumno</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">alumno</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AlumnoController.agregarAlumno-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="AlumnoController.agregarAlumno-expanded"><a name="L66"></a><tt class="py-lineno">66</tt>  <tt class="py-line">        <tt class="py-docstring">"""Agrega a un Alumno.</tt> </tt>
+<a name="L67"></a><tt class="py-lineno">67</tt>  <tt class="py-line"><tt class="py-docstring">            :parameter:</tt> </tt>
+<a name="L68"></a><tt class="py-lineno">68</tt>  <tt class="py-line"><tt class="py-docstring">                - alumno: Alumno a agregar."""</tt> </tt>
+</div></div><a name="L69"></a><tt class="py-lineno">69</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed Aug 26 22:05:41 2015
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
