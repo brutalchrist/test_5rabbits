@@ -1,23 +1,50 @@
 body {
   background: #f1f1f1;
+  font-size: 12px;
 }
 
 #agenda {
-  border: 5px;
-  background-color: #fff;
-  height: 90px;
-  
-  position: absolute;
-  top: 50%;
-  width: 960px;
+    background-color: #fff;
+    width: 960px;
+    height: 500px;
 }
 
-.bloques {
-  width: 126px;
-  height: 10px;
+.centrado {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.bloques_hora {
-  width: 39px;
-  height: 10px;
+.bloque {
+    border-bottom: 1px solid #f1f1f1;
+    width: 100%;
+    height: 19px;
+    text-align: center;
+}
+
+.cabecera {
+    border-bottom: 1px solid #f1f1f1;
+    width: 100%;
+    height: 19px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #CCC;
+}
+
+.columna_hora {
+    border-left: 1px solid #f1f1f1;
+    float: left;
+    width: 38px;
+    height: 100%;
+    text-align: center;
+    background-color: #CCC;
+}
+
+.columna_dia {
+    border-left: 1px solid #f1f1f1;
+    float:left;
+    width: 125px;
+    height: 100%;
+    text-align: center;
 }

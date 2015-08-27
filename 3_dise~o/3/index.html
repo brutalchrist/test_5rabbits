@@ -1,19 +1,25 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Agenda - Test LemonTech</title>
+    <title>Agenda - Test Diseño LemonTech</title>
+    <meta charset="UTF-8">
 		
     <link rel="stylesheet" id="estilos-css"  href="estilos.css" />
-    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type='text/javascript' src="metodos.js"></script>
-    <script type='text/javascript' src='jquery/jquery.js?ver=1.11.2'></script>
-    <script type='text/javascript'>
-      cargarJSON("entrada.json");
-    </script>
   </head>
 	
   <body>
-    <div id='agenda'>
-      <p>HOLA</p>
+    <div id="agenda" class="centrado">
+      <div id="hora1" class="columna_hora"> </div>
+      <div id="lunes" class="columna_dia"> </div>
+      <div id="martes" class="columna_dia"> </div>
+      <div id="miercoles" class="columna_dia"> </div>
+      <div id="jueves" class="columna_dia"> </div>
+      <div id="viernes" class="columna_dia"> </div>
+      <div id="sabado" class="columna_dia"> </div>
+      <div id="domingo" class="columna_dia"> </div>
+      <div id="hora2" class="columna_hora"> </div>
     </div>
   </body>
 </html>
